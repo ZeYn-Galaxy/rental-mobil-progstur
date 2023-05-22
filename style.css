@@ -107,6 +107,8 @@ body {
     flex-direction: column;
     background-color: #FFF;
     box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 label {
