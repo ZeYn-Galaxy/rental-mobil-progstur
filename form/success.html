@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Sukses</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="/">
+                <div class="brand">Rental <span>Mobil</span></div>
+            </a>
+            <span id="saku"></span>
+        </div>
+        <h2 style="padding-top: 15px; padding-left: 15px;">Terima kasih sudah menggunakan layanan kami!</h2>
+        <div class="wrapper">
+            <div class="nota nota-1">
+                <span class="title">Nama</span>
+                <span class="value" id="nota-nama">...</span>
+            </div>
+            <div class="nota">
+                <span class="title">No. Telp</span>
+                <span class="value" id="nota-telp">...</span>
+            </div>
+            <div class="nota nota-1">
+                <span class="title">Alamat</span>
+                <span class="value" id="nota-alamat">...</span>
+            </div>
+            <div class="nota">
+                <span class="title">Merek</span>
+                <span class="value" id="nota-merek">...</span>
+            </div>
+            <div class="nota nota-1">
+                <span class="title">Durasi</span>
+                <span class="value" id="nota-durasi">...</span>
+            </div>
+            <div class="nota">
+                <span class="title">Harga</span>
+                <span class="value" id="nota-harga">...</span>
+            </div>
+            <div class="nota nota-1">
+                <span class="title">Total</span>
+                <span class="value" id="nota-total">...</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    import data from "../data.json" assert { type: 'json' };
+
+    let rental = sessionStorage.getItem('rental')
+    document.title = rental
+
+    const saku = document.getElementById('saku');
+    saku.innerText = "Saku: Rp. " + parseInt(sessionStorage.getItem('saku')).toLocaleString();
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const nama = urlParams.get('nama')
+    const nota_nama = document.getElementById('nota-nama')
+    nota_nama.innerText = nama;
+
+    const telp = urlParams.get('telp')
+    const nota_telp = document.getElementById('nota-telp')
+    nota_telp.innerText = telp
+
+    const alamat = urlParams.get('alamat')
+    const nota_alamat = document.getElementById('nota-alamat')
+    nota_alamat.innerText = alamat
+
+    const durasi = urlParams.get('durasi')
+    const nota_durasi = document.getElementById('nota-durasi')
+    nota_durasi.innerText = durasi + " Hari"
+
+    const nota_harga = document.getElementById('nota-harga')
+    nota_harga.innerText = "Rp. " + parseInt(data[rental].Harga).toLocaleString() + " x (" + durasi + ") Hari"
+
+    const nota_total = document.getElementById('nota-total')
+    nota_total.innerText = "Rp. " + (parseInt(data[rental].Harga) * durasi).toLocaleString()
+    const nota_merek = document.getElementById('nota-merek')
+    nota_merek.innerText = rental
+</script>
+
+</html>

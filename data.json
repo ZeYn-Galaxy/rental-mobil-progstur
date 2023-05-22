@@ -1,0 +1,22 @@
+{
+    "Toyota Supra": {
+        "Harga": "1500000",
+        "Image": "ToyotaSupra",
+        "MaxDurasi": 7
+    },
+    "Fortuner": {
+        "Harga": "1500000",
+        "Image": "Fortuner",
+        "MaxDurasi": 5
+    }, 
+    "Hyundai": {
+        "Harga": "1500000",
+        "Image": "Hyundai",
+        "MaxDurasi": 6
+    }, 
+    "Inova": {
+        "Harga": "1000000",
+        "Image": "Inova",
+        "MaxDurasi": 7
+    } 
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="/">
+                <div class="brand">Rental <span>Mobil</span></div>
+            </a>
+            <span id="saku"></span>
+        </div>
+        <span id="merek">Merek Mobil</span>
+        <form class="wrapper" action="./success.html" onsubmit="return validasi()" name="form">
+            <label for="nama">Nama</label>
+            <input class="input" type="text" name="nama" placeholder="Masukkan Nama Anda" id="nama">
+
+            <label for="telp">No. Telepon</label>
+            <input class="input" type="text" name="telp" placeholder="Masukkan Nomor Telepon Anda" id="telp">
+
+            <label for="durasi">Durasi</label>
+            <input class="input" type="number" name="durasi" placeholder="Maksimal Durasi (3) Hari." id="durasi">
+
+            <label for="alamat">Alamat</label>
+            <textarea name="alamat" placeholder="Alamat Anda" id="alamat"></textarea>
+
+            <span id="form-harga"></span>
+            <input type="submit" value="SUBMIT">
+        </form>
+    </div>
+</body>
+<script>
+
+    const rental = sessionStorage.getItem('rental')
+    let saku = sessionStorage.getItem('saku')
+    let harga = sessionStorage.getItem('harga')
+    let maxDurasi = sessionStorage.getItem('maxDurasi')
+
+    function validasi() {
+        const nama = document.getElementById('nama')
+        const telp = document.getElementById('telp')
+        const durasi = document.getElementById('durasi')
+        const alamat = document.getElementById('alamat')
+
+
+        if (nama.value.length === 0) {
+            alert('nama belum diisi!')
+            return false
+        }
+        
+        if (telp.value.length === 0) {
+            alert('telp belum diisi!')
+            return false
+        }
+
+        if (durasi.value.length === 0 || durasi.value > maxDurasi) {
+            alert('durasi belum diisi atau melebihi maksimal waktu!')
+            return false
+        }
+        if (alamat.value.length === 0) {
+            alert('alamat belum diisi!')
+            return false
+        }
+
+        if (saku < parseInt(harga)) {
+            alert('Saku anda tidak cukup!')
+            return false
+        }
+
+        sessionStorage.setItem('saku', (saku-(parseInt(harga) * durasi.value)))
+        return true
+    }
+</script>
+<script type="module" src="./rental.js"></script>
+
+</html>

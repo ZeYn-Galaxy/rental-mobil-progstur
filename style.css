@@ -1,0 +1,230 @@
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+}
+
+.navbar {
+    width: 100%;
+    padding: 8px 0;
+    background-color: #6E2BF3;
+    box-shadow: 1px 10px 12px 0px rgba(0, 0, 0, 0.13);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+    margin: 15px;
+    cursor: pointer;
+}
+
+.item .image {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    justify-content: center;
+}
+
+.item .image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item .deskripsi {
+    width: 100%;
+    height: 30%;
+    background-color: aliceblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.item .deskripsi .nama {
+    width: 100%;
+    text-align: center;
+    background-color: #6E2BF3;
+    padding: 2.5px 0;
+    border-radius: 30px;
+    color: #FFF;
+    font-weight: 700;
+}
+
+/* .item .deskripsi .nama::before {
+    content:  '';
+    display: block;
+    height: 5px;
+    background-color: #6E2BF3;
+} */
+
+.item .deskripsi .harga {
+    width: 100%;
+    text-align: start;
+    padding-left: 5px;
+    padding-top: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #101010;
+}
+
+.item .link {
+    width: 100px;
+    height: 100%;
+}
+
+.wrapper {
+    width: 90%;
+    height: 360px;
+    margin-top: 30px;
+    display: flex;
+    padding-top: 15px;
+    flex-direction: column;
+    background-color: #FFF;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+}
+
+label {
+    margin-left: 15px;
+}
+
+.input {
+    width: 90%;
+    height: 5%;
+    padding: 5px;
+    font-size: 1.15rem;
+    margin: 0 auto;
+    border: none;
+    background-color: #5500ff1c;
+    outline: none;
+}
+
+.input:focus {
+    border: 2px solid #360a8d2b;
+    padding: 5px;
+}
+
+.input::placeholder {
+    font-size: .8rem;
+    font-style: italic;
+    color: #2b097169;
+}
+
+
+textarea {
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 15%;
+    max-height: 30%;
+    padding: 5px;
+    font-size: 1.15rem;
+    margin: 0 auto;
+    border: none;
+    background-color: #5500ff1c;
+    outline: none;
+}
+
+textarea:focus {
+    border: 2px solid #360a8d2b;
+    padding: 5px;
+}
+
+textarea::placeholder {
+    font-size: .8rem;
+    font-style: italic;
+    color: #2b097169;
+}
+
+#form-harga {
+    width: 100%;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+
+input[type="submit"] {
+    width: 95%;
+    margin: auto;
+    height: 8%;
+    border: none;
+    color: #FFF;
+    font-size: 1.25rem;
+    background-color: #6E2BF3;    
+}
+
+#saku {
+    font-size: 0.9rem;
+    color: #FFF;
+    padding-right: 10px;
+}
+
+.brand {
+    padding-left: 10px;
+    font-size: 1.25rem;
+    color: #FFF;
+}
+
+.brand span {
+    font-weight: 700;
+}
+
+#merek {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.nota {
+    width: 100%;
+    min-height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nota-1 {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nota .title {
+    width: 30%;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.nota .value {
+    width: 70%;
+    padding: 15px 0;
+    font-weight: 500;
+    text-align: start;
+    padding-left: 15px;
+}
