@@ -12,7 +12,7 @@ saku.innerText = "Saku: Rp. " + parseInt(sessionStorage.getItem('saku')).toLocal
 for (let x in data) {
     
     const a = document.createElement('a')
-    a.href = "rental-mobil-progstur/src/form/rental.html"
+    a.href = "/rental-mobil-progstur/src/form/rental.html"
 
     const item = document.createElement('div')
     item.className = "item"
@@ -21,7 +21,7 @@ for (let x in data) {
     image.className = "image"
 
     const img = document.createElement('img')
-    img.src = "rental-mobil-progstur/src/images/" + data[x].Image + ".webp"
+    img.src = "/rental-mobil-progstur/src/images/" + data[x].Image + ".webp"
     image.appendChild(img)
 
     const deskripsi = document.createElement('div')
