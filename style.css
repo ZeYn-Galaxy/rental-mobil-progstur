@@ -111,8 +111,22 @@ body {
     padding-right: 15px;
 }
 
+.wrapper-nota {
+    width: 90%;
+    height: 360px;
+    margin-top: 30px;
+    display: flex;
+    padding-top: 15px;
+    flex-direction: column;
+    background-color: #FFF;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 label {
     margin-left: 15px;
+    margin-top: 5px;
 }
 
 .input {
@@ -229,4 +243,123 @@ input[type="submit"] {
     font-weight: 500;
     text-align: start;
     padding-left: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        width: 60%;
+        height: 360px;
+        margin-top: 30px;
+        display: flex;
+        padding-top: 15px;
+        flex-direction: column;
+        background-color: #FFF;
+        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        width: 50%;
+        height: 360px;
+        margin-top: 30px;
+        display: flex;
+        padding-top: 15px;
+        flex-direction: column;
+        background-color: #FFF;
+        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .wrapper {
+        width: 50%;
+        height: 500px;
+        margin-top: 30px;
+        display: flex;
+        padding-top: 15px;
+        flex-direction: column;
+        background-color: #FFF;
+        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    label {
+        margin-left: 25px;
+        margin-top: 15px
+    }
+    
+    #form-harga {
+        width: 100%;
+        margin-left: 25px;
+        margin-top: 15px;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+        width: 50%;
+        height: 500px;
+        margin-top: 30px;
+        display: flex;
+        padding-top: 15px;
+        flex-direction: column;
+        background-color: #FFF;
+        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.21);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    label {
+        margin-left: 45px;
+        margin-top: 15px
+    }
+    
+    #form-harga {
+        width: 100%;
+        margin-left: 45px;
+        margin-top: 15px;
+    }
+    
+    .input {
+        width: 90%;
+        height: 5%;
+        padding: 10px;
+        font-size: 1.15rem;
+        margin: 0 auto;
+        border: none;
+        background-color: #5500ff1c;
+        outline: none;
+    }
+
+    .input::placeholder {
+        font-size: 1rem;
+        font-style: italic;
+        color: #2b097169;
+    }
+
+    textarea {
+        min-width: 90%;
+        max-width: 90%;
+        min-height: 15%;
+        max-height: 30%;
+        padding: 10px;
+        font-size: 1.15rem;
+        margin: 0 auto;
+        border: none;
+        background-color: #5500ff1c;
+        outline: none;
+    }
+
+    textarea::placeholder {
+        font-size: 1rem;
+        font-style: italic;
+        color: #2b097169;
+    }
 }
