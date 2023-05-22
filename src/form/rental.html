@@ -41,7 +41,6 @@
     let saku = sessionStorage.getItem('saku')
     let harga = sessionStorage.getItem('harga')
     let maxDurasi = sessionStorage.getItem('maxDurasi')
-
     function validasi() {
         const nama = document.getElementById('nama')
         const telp = document.getElementById('telp')
@@ -73,7 +72,7 @@
             return false
         }
 
-        sessionStorage.setItem('saku', ((parseInt(harga) * durasi.value) - saku))
+        sessionStorage.setItem('saku', saku - (parseInt(harga) * durasi.value))
         return true
     }
 </script>
