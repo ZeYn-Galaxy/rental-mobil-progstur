@@ -73,7 +73,7 @@
             return false
         }
 
-        sessionStorage.setItem('saku', (saku-(parseInt(parseInt(harga) * durasi.value))))
+        sessionStorage.setItem('saku', ((parseInt(harga) * durasi.value) - saku))
         return true
     }
 </script>
