@@ -1,8 +1,7 @@
 import data from "./src/data.json" assert { type: 'json' };
 
-if (sessionStorage.getItem('saku') == 0 || sessionStorage.getItem('saku') == null) {
-    sessionStorage.setItem('saku', 15000000)
-}
+sessionStorage.setItem('saku', 15000000)
+
 
 const list = document.getElementById('list');
 const saku = document.getElementById('saku');

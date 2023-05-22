@@ -52,7 +52,7 @@
             alert('nama belum diisi!')
             return false
         }
-        
+
         if (telp.value.length === 0) {
             alert('telp belum diisi!')
             return false
@@ -67,12 +67,12 @@
             return false
         }
 
-        if (saku < parseInt(harga)) {
+        if (saku < harga) {
             alert('Saku anda tidak cukup!')
             return false
         }
 
-        sessionStorage.setItem('saku', saku - (parseInt(harga) * durasi.value))
+        sessionStorage.setItem('saku', saku - (harga * durasi.value))
         return true
     }
 </script>
