@@ -59,7 +59,7 @@
             return false
         }
 
-        if (durasi.value.length === 0 || durasi.value > maxDurasi) {
+        if (durasi.value.length === 0 && durasi.value > maxDurasi) {
             alert('durasi belum diisi atau melebihi maksimal waktu!')
             return false
         }
