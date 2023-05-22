@@ -1,4 +1,4 @@
-import data from "../../data.json" assert { type: 'json' };
+import data from "../data.json" assert { type: 'json' };
 
 let rental = sessionStorage.getItem('rental')
 document.title = rental
